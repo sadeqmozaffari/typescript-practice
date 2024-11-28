@@ -1,0 +1,49 @@
+﻿install typescript:
+npm install -g typescript
+
+update tp last version:
+npm update -g typescript
+
+check typescript version:
+tsc -v
+
+compile ts to js :
+tsc main.ts    => main.js
+
+compile all .ts files:
+tsc *.ts
+
+switch --watch
+tsc main.ts --watch
+
+Optional Properties:
+ color?: string
+
+Readonly properties
+readonly x: number;
+
+variables use const
+const p = 3.14;
+
+Extending Interfaces:
+
+interface Shape {
+    color: string;
+}
+
+interface Square extends Shape {
+    sideLength: number;
+}
+
+Implements Interface:
+
+
+Modules
+Modules are executed within their own scope, not in the global scope
+
+Export statements
+Export statements are handy when exports need to be renamed for consumers
+export { ZipCodeValidator as mainValidator };
+
+import * as validator from "./ZipCodeValidator";
+let myValidator = new validator.ZipCodeValidator();
